@@ -33,8 +33,24 @@ requirements:
     - pyasn1  # [py27]
 
 test:
-  imports:
+  source_files:
     - test
+  imports:
+    - quandl
+    - quandl.errors
+    - quandl.model
+    - quandl.operations
+    - quandl.utils
+  commands:
+    - nosetests
+  requires:
+    - flake8
+    - nose
+    - httpretty
+    - mock
+    - factory_boy
+    - jsondate
+    - parameterized
 
 about:
   home: https://www.quandl.com/
