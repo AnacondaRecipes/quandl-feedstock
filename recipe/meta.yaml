@@ -41,8 +41,9 @@ test:
     - quandl.model
     - quandl.operations
     - quandl.utils
-  commands:
-    - nosetests
+  # tests fail on windows due to line endings
+  commands:        # [not win]
+    - nosetests    # [not win]
   requires:
     - flake8
     - nose
